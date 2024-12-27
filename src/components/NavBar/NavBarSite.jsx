@@ -14,18 +14,22 @@ import {
   NavbarText,
 } from 'reactstrap';
 import { FaWhatsapp, FaInstagram,FaLinkedinIn,FaEnvelope } from 'react-icons/fa'; // Importe o ícone
+import './style.css'
 
 
-
-function NavBarSite() {
+function NavBarSite({show}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
+  if (!show) {
+    return null;
+  }
+
   return (
-    <div>
-      <Navbar color="light" light expand="md"> {/* Adicione expand="md" */}
-        <NavbarBrand className='title-1 display-1' href="/">Sofya Batista </NavbarBrand>
+    <div className='navbar-site'>
+      <Navbar color="dark" dark={true} expand="md"> {/* Adicione expand="md" */}
+        <NavbarBrand className='title-1 ' href="/">Sofya Batista </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto" navbar>

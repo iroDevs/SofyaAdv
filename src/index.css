@@ -18,7 +18,10 @@
     --white : #eeeeee;
 
     /*Fontes*/
-    --title-1: 'Playfair Display', serif;
+
+    --title: 'IBM Plex Serif', serif;
+    --line-text: 'Playwrite AT Guides', sans-serif;
+
   }
 
  /* utilites-class */
@@ -28,12 +31,17 @@
     color: red!important;
 }
 
-.title-1{
-    font-family: var(---title-1);
+.title-1 {
+    font-family: var(--title) !important; /* Corrigido para --title-2 */
     font-size: 2rem !important;
-    color: var(--white);
 
+    color: var(--white);
 }
+
+.letra-desenhada {
+  font-family: var(--line-text) !important;
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
